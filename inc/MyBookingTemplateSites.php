@@ -7,12 +7,12 @@
 function mybookingTemplatesImporter_import_files() {
   return array(
     array(
-      'import_file_name'           => 'rentacar', // The name of the demo
-      'categories'                 => array( 'Rentacar' ), // Category tab where you want to show
-      'local_import_file'            => trailingslashit(plugin_dir_path( __DIR__ ) ).'demos/rentacar/content.xml', // Content file URL
-      'local_import_widget_file'     => trailingslashit(plugin_dir_path( __DIR__ ) ).'demos/rentacar/widgets.json', // Widgets file URL
-      'local_import_customizer_file' => trailingslashit(plugin_dir_path( __DIR__ ) ).'demos/rentacar/customizer.dat', // Customizer settings file URL
-      'import_preview_image_url'     => plugin_dir_url(__DIR__).'demos/rentacar/preview.png', // Preview image URL
+      'import_file_name'             => 'rentacar', // The name of the site template
+      'categories'                   => array( 'Rentacar' ), // Category tab where you want to show
+      'local_import_file'            => trailingslashit(plugin_dir_path( __DIR__ ) ).'templates/rentacar/content.xml', // Content file URL
+      'local_import_widget_file'     => trailingslashit(plugin_dir_path( __DIR__ ) ).'templates/rentacar/widgets.json', // Widgets file URL
+      'local_import_customizer_file' => trailingslashit(plugin_dir_path( __DIR__ ) ).'templates/rentacar/customizer.dat', // Customizer settings file URL
+      'import_preview_image_url'     => plugin_dir_url(__DIR__).'templates/rentacar/preview.png', // Preview image URL
       'import_notice'                => __( 'Rent a car', 'mybooking-templates-importer' ), // Message shown before start importing
       'preview_url'                  => 'https://pro-rentacar.mybookingcloud.com' // Demo URL
     )
