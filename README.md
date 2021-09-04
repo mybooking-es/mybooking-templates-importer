@@ -21,7 +21,7 @@ The **/inc/MyBookingTemplateSites.php** contains the function that calls the fil
 
 Before importing a demo be sure that:
 * You are using a fresh WordPress install or you will get duplication issues
-* You have same plugins and theme that demo or it will break your site
+* You have to install Mybooking theme, Mybooking Reservation Engine and Elementor Plugin
 
 After you meet the requeriments go to Aperance/Mybooking Importer on your WordPress dashboard and follow the instructions.
 
