@@ -44,20 +44,19 @@ do_action( 'mybooking-templates-importer/plugin_page_header' );
 	ob_start();
 	?>
 
-	<div class="mybookingTemplatesImporter__intro-notice  notice  notice-warning  is-dismissible">
-		<p><?php esc_html_e( 'Before you begin, make sure all the required plugins are activated.', 'mybooking-templates-importer' ); ?></p>
-	</div>
-
 	<div class="mybookingTemplatesImporter__intro-text">
 		<p class="about-description">
-			<?php esc_html_e( 'Importing demo data (post, pages, images, theme settings, ...) is the easiest way to setup your theme.', 'mybooking-templates-importer' ); ?>
-			<?php esc_html_e( 'It will allow you to quickly edit everything instead of creating content from scratch.', 'mybooking-templates-importer' ); ?>
+			<?php echo wp_kses_post( 'This is a utility to create a reservation web site with <u>mybooking</u> theme and <u>mybooking reservation engine</u> plugin.', 'mybooking-templates-importer' ); ?>
+			<?php esc_html_e( 'It creates the reservation process, contact, terms and conditions and legal pages.', 'mybooking-templates-importer' ); ?>
 		</p>
-
-		<br>
-		<p><?php esc_html_e( 'Required plugins:', 'mybooking-templates-importer' ); ?></p>
+		<p><b><?php esc_html_e( 'Required plugins:', 'mybooking-templates-importer' ); ?></b></p>
 		<ul>
+			<li><?php esc_html_e( 'MyBooking Reservation Engine', 'mybooking-templates-importer' ); ?></li>
 			<li><?php esc_html_e( 'Elementor', 'mybooking-templates-importer' ); ?></li>
+		</ul>
+		<p><b><?php esc_html_e( 'Required theme:', 'mybooking-templates-importer' ); ?></b></p>
+		<ul>
+			<li><?php esc_html_e( 'MyBooking', 'mybooking-templates-importer' ); ?></li>
 		</ul>
 
 		<hr>
@@ -79,6 +78,10 @@ do_action( 'mybooking-templates-importer/plugin_page_header' );
 	// Display the plugin intro text (can be replaced with custom text through the filter below).
 	echo wp_kses_post( apply_filters( 'mybooking-templates-importer/plugin_intro_text', $plugin_intro_text ) );
 	?>
+
+	<p> 
+		<?php esc_html_e( 'Select one of the following templates:', 'mybooking-templates-importer' ); ?>
+	</p>
 
 	<?php if ( 1 === count( $predefined_themes ) ) : ?>
 

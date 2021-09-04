@@ -33,6 +33,8 @@ It is necessary to install [MyBookingReservationEngine](https://wordpress.org/pl
 2. Upload the 'mybooking-templates-importer' directory to your '/wp-content/plugins/' directory, using your favorite method (ftp, sftp, scp, etc...)
 3. Activate 'MyBooking Templates Importer' from your Plugins page.
 
+Then in Appearance menu a new option will be shown, Mybooking Importer, that allows to import sites.
+
 == Frequently Asked Questions ==
 
 = How can I import via the WP-CLI? =
