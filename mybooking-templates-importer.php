@@ -3,7 +3,7 @@
 /*
 Plugin Name: Mybooking Templates Importer
 Plugin URI: https://mybooking.es/
-Description: Get Templates for Mybooking theme. Set up a renting site (car hire, accommodation, activities) in minutes. It is based on https://github.com/awesomemotive/one-click-demo-import
+Description: Reservation templates importer for Mybooking theme and MyBooking Reservation Engine. It allows to creating a renting or accomoodation website in minutes. 
 Version: 1.0.0
 Author: mybooking
 Author URI: https://mybooking.es
