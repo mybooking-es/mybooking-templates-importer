@@ -46,7 +46,7 @@ do_action( 'mybooking-templates-importer/plugin_page_header' );
 
 	<div class="mybookingTemplatesImporter__intro-text">
 		<p class="about-description">
-			<?php echo wp_kses_post( 'This is a utility to create a reservation web site with <u>mybooking</u> theme and <u>mybooking reservation engine</u> plugin.', 'mybooking-templates-importer' ); ?>
+			<?php echo wp_kses_post( 'This is a <b>utility</b> to create a reservation website with <u>mybooking theme</u> and <u>mybooking reservation engine plugin</u>.', 'mybooking-templates-importer' ); ?>
 			<?php esc_html_e( 'It creates the reservation process, contact, terms and conditions and legal pages.', 'mybooking-templates-importer' ); ?>
 		</p>
 		<p><b><?php esc_html_e( 'Required plugins:', 'mybooking-templates-importer' ); ?></b></p>
