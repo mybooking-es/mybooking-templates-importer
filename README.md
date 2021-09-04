@@ -25,7 +25,7 @@ Before importing a demo be sure that:
 
 After you meet the requeriments go to Aperance/Mybooking Importer on your WordPress dashboard and follow the instructions.
 
-## Adding a new demo
+## Adding a new template
 
 First of all clone this repo to your machine.
 
