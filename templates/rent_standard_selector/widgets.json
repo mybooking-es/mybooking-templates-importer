@@ -16,14 +16,6 @@
          "pll_lang":"es"
       }
    },
-   "home_widgets_bottom":{
-      "text-3":{
-         "title":"",
-         "text":"[mybooking_testimonials]",
-         "filter":true,
-         "visual":true
-      }
-   },
    "blog_sidebar":{
       "search-2":{
          "title":""

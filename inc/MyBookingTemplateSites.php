@@ -7,14 +7,13 @@
 function mybookingTemplatesImporter_import_files() {
   return array(
     array(
-      'import_file_name'             => 'rentacar', // The name of the site template
-      'categories'                   => array( 'Rentacar' ), // Category tab where you want to show
-      'local_import_file'            => trailingslashit(plugin_dir_path( __DIR__ ) ).'templates/rentacar/content.xml', // Content file URL
-      'local_import_widget_file'     => trailingslashit(plugin_dir_path( __DIR__ ) ).'templates/rentacar/widgets.json', // Widgets file URL
-      'local_import_customizer_file' => trailingslashit(plugin_dir_path( __DIR__ ) ).'templates/rentacar/customizer.dat', // Customizer settings file URL
-      'import_preview_image_url'     => plugin_dir_url(__DIR__).'templates/rentacar/preview.png', // Preview image URL
-      'import_notice'                => __( 'Rent a car', 'mybooking-templates-importer' ), // Message shown before start importing
-      'preview_url'                  => 'https://pro-rentacar.mybookingcloud.com' // Demo URL
+      'import_file_name'             => 'Rent Selector with Elementor', // The name of the site template
+      'categories'                   => array( 'Rent' ), // Category tab where you want to show
+      'local_import_file'            => trailingslashit(plugin_dir_path( __DIR__ ) ).'templates/rent_standard_selector/content.xml', // Content file URL
+      'local_import_widget_file'     => trailingslashit(plugin_dir_path( __DIR__ ) ).'templates/rent_standard_selector/widgets.json', // Widgets file URL
+      'local_import_customizer_file' => trailingslashit(plugin_dir_path( __DIR__ ) ).'templates/rent_standard_selector/customizer.dat', // Customizer settings file URL
+      'import_preview_image_url'     => plugin_dir_url(__DIR__).'templates/rent_standard_selector/preview.png', // Preview image URL
+      'import_notice'                => __( 'Rent Selector with Elementor', 'mybooking-templates-importer' ), // Message shown before start importing
     )
   );
 }
