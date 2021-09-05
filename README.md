@@ -1,6 +1,11 @@
 # README
 
-Mybooking Importer Plugin is a tool for importing Mybooking demo content and complete base sites into a new fresh WordPress installation. 
+Mybooking Templates Importer Plugin is a tool that imports ready to use reservation websites. It makes easy to create a site with a
+reservation engine for a rental, accomodation or activities companies. 
+
+It is a utility for designers and developers that are using MyBooking Reservation Engine and Mybooking theme and want to speed up the
+site creation.
+
 This plugin is based on [One Click Demo Import](https://wordpress.org/plugins/one-click-demo-import) and it has been adapted to import 
 templates to mybooking theme for rental and accommodation sites.
 
