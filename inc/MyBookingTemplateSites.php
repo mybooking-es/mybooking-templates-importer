@@ -30,7 +30,7 @@ function mybookingTemplatesImporter_after_import_setup() {
   );
 
   // Assign front page and posts page (blog page).
-  $front_page_id = get_page_by_title( 'Inicio' );
+  $front_page_id = get_page_by_title( 'Home' );
   //$blog_page_id  = get_page_by_title( 'Blog' );
 
   update_option( 'show_on_front', 'page' );
