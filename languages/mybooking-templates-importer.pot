@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: MyBooking Templates Importer 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/one-click-demo-"
 "import/\n"
-"POT-Creation-Date: 2021-09-04 22:55+0000\n"
+"POT-Creation-Date: 2021-09-07 13:29+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,7 +26,7 @@ msgstr ""
 "X-Poedit-Bookmarks: \n"
 "X-Textdomain-Support: yes\n"
 
-#: inc/MybookingTemplatesImport.php:390
+#: inc/MybookingTemplatesImport.php:365
 msgid ""
 "%1$s%3$sThat's it, all done!%4$s%2$sThe demo import has finished. Please "
 "check your page and make sure that everything has imported correctly. If it "
@@ -34,7 +34,7 @@ msgid ""
 "because it has done its job.%5$s"
 msgstr ""
 
-#: inc/MybookingTemplatesImport.php:401
+#: inc/MybookingTemplatesImport.php:376
 msgid ""
 "%1$sThe demo import has finished, but there were some import errors.%2$sMore "
 "details about the errors can be found in this %3$s%5$slog file%6$s%4$s%7$s"
@@ -46,7 +46,7 @@ msgid ""
 "experience server timeout errors.%s"
 msgstr ""
 
-#: inc/Helpers.php:405
+#: inc/Helpers.php:306
 msgid ""
 "%sYour user role isn't high enough. You don't have permission to import demo "
 "data.%s"
@@ -56,31 +56,25 @@ msgstr ""
 msgid "All"
 msgstr ""
 
-#: inc/Downloader.php:76
-msgid ""
-"An error occurred while fetching file from: %1$s%2$s%3$s!%4$sReason: %5$s - "
-"%6$s."
-msgstr ""
-
-#: inc/Helpers.php:276
+#: inc/Helpers.php:177
 msgid ""
 "An error occurred while reading a file from your server! Tried reading file "
 "from path: %s%s."
 msgstr ""
 
-#: inc/Helpers.php:323
+#: inc/Helpers.php:224
 msgid ""
 "An error occurred while retrieving reading/writing permissions to your "
 "server (could not retrieve WP filesystem credentials)!"
 msgstr ""
 
-#: inc/Helpers.php:199 inc/Helpers.php:242
+#: inc/Helpers.php:143
 msgid ""
 "An error occurred while writing file to your server! Tried to write a file "
 "to: %s%s."
 msgstr ""
 
-#: inc/MybookingTemplatesImport.php:190
+#: inc/MybookingTemplatesImport.php:191
 msgid "Are you sure?"
 msgstr ""
 
@@ -89,12 +83,8 @@ msgid ""
 "At least one of the possible options should be set! Check them with --help"
 msgstr ""
 
-#: inc/MybookingTemplatesImport.php:191
+#: inc/MybookingTemplatesImport.php:192
 msgid "Cancel"
-msgstr ""
-
-#: inc/Helpers.php:467
-msgid "Content file was not uploaded. Error: %s"
 msgstr ""
 
 #: inc/WPCLICommands.php:185
@@ -103,10 +93,6 @@ msgstr ""
 
 #: inc/WPCLICommands.php:201
 msgid "Content import finished!"
-msgstr ""
-
-#: inc/Helpers.php:501
-msgid "Customizer file was not uploaded. Error: %s"
 msgstr ""
 
 #: inc/WPCLICommands.php:254
@@ -127,10 +113,6 @@ msgstr ""
 
 #: inc/WPCLICommands.php:151
 msgid "Demo import files retrieved successfully!"
-msgstr ""
-
-#: inc/MybookingTemplatesImport.php:253 inc/MybookingTemplatesImport.php:264
-msgid "Downloaded files"
 msgstr ""
 
 #: views/plugin-page.php:55
@@ -166,19 +148,6 @@ msgstr ""
 msgid "Executing action: %s ..."
 msgstr ""
 
-#: inc/Helpers.php:572
-msgid ""
-"Files info:%1$sSite URL = %2$s%1$sData file = %3$s%1$sWidget file = "
-"%4$s%1$sCustomizer file = %5$s%1$sRedux files:%1$s%6$s"
-msgstr ""
-
-#. Description of the plugin
-msgid ""
-"Get Templates for Mybooking theme. Set up a renting site (car hire, "
-"accommodation, activities) in minutes. It is based on https://github."
-"com/awesomemotive/one-click-demo-import"
-msgstr ""
-
 #: inc/WPCLICommands.php:37
 msgid "Here are the predefined demo imports:"
 msgstr ""
@@ -195,7 +164,7 @@ msgstr ""
 msgid "Import"
 msgstr ""
 
-#: inc/Helpers.php:311
+#: inc/Helpers.php:212
 msgid "Import Site Templates"
 msgstr ""
 
@@ -243,26 +212,10 @@ msgstr ""
 msgid "Importing..."
 msgstr ""
 
-#: inc/Helpers.php:568
-msgid "Initial max execution time = %s"
-msgstr ""
-
 #: views/plugin-page.php:50
 msgid ""
 "It creates the reservation process, contact, terms and conditions and legal "
-"pages."
-msgstr ""
-
-#: inc/MybookingTemplatesImport.php:240
-msgid "Manually uploaded files"
-msgstr ""
-
-#: inc/Helpers.php:514
-msgid "Missing Redux option name! Please also enter the Redux option name!"
-msgstr ""
-
-#: inc/Downloader.php:58
-msgid "Missing URL for downloading a file!"
+"pages. It also setup the menus and the widgets to create a working site."
 msgstr ""
 
 #: views/plugin-page.php:59
@@ -281,7 +234,7 @@ msgstr ""
 msgid "MyBooking Reservation Engine"
 msgstr ""
 
-#: inc/Helpers.php:310
+#: inc/Helpers.php:211
 msgid "MyBooking Templates Importer"
 msgstr ""
 
@@ -290,7 +243,7 @@ msgstr ""
 msgid "Mybooking Templates Importer"
 msgstr ""
 
-#: inc/Helpers.php:371
+#: inc/Helpers.php:272
 msgid "MyBooking Templates Importer - "
 msgstr ""
 
@@ -304,15 +257,11 @@ msgid ""
 "data will be deleted or modified."
 msgstr ""
 
-#: inc/Helpers.php:438
-msgid "No file provided."
-msgstr ""
-
-#: inc/MybookingTemplatesImport.php:269
+#: inc/MybookingTemplatesImport.php:244
 msgid "No import files specified!"
 msgstr ""
 
-#: inc/MybookingTemplatesImport.php:189
+#: inc/MybookingTemplatesImport.php:190
 msgid "No preview image defined for this import."
 msgstr ""
 
@@ -326,11 +275,6 @@ msgstr ""
 
 #: inc/WidgetImporter.php:286
 msgid "No Title"
-msgstr ""
-
-#: inc/Helpers.php:575 inc/Helpers.php:576 inc/Helpers.php:577
-#: inc/Helpers.php:578
-msgid "not defined!"
 msgstr ""
 
 #: views/plugin-page.php:69
@@ -361,16 +305,12 @@ msgstr ""
 msgid "Preview"
 msgstr ""
 
-#: inc/Helpers.php:532
-msgid "Redux file was not uploaded. Error: %s"
-msgstr ""
-
 #: inc/ReduxImporter.php:51
 msgid "Redux settings import for: %s finished successfully!"
 msgstr ""
 
 #: inc/MyBookingTemplateSites.php:16
-msgid "Rent a car"
+msgid "Rent Selector with Elementor"
 msgstr ""
 
 #: views/plugin-page.php:52
@@ -381,6 +321,12 @@ msgstr ""
 msgid "Required theme:"
 msgstr ""
 
+#. Description of the plugin
+msgid ""
+"Reservation templates importer for Mybooking theme and MyBooking Reservation "
+"Engine. It allows to creating a renting or accomoodation website in minutes."
+msgstr ""
+
 #: views/plugin-page.php:140
 msgid "Search demos..."
 msgstr ""
@@ -389,7 +335,7 @@ msgstr ""
 msgid "Select one of the following templates:"
 msgstr ""
 
-#: inc/MybookingTemplatesImport.php:193
+#: inc/MybookingTemplatesImport.php:194
 msgid "Selected demo import:"
 msgstr ""
 
@@ -418,14 +364,6 @@ msgid ""
 "properly. Please contact your hosting company and ask them to update the PHP "
 "version of your site to at least PHP 7.2.%4$s Your current version of PHP: "
 "%2$s%1$s%3$s"
-msgstr ""
-
-#: inc/MybookingTemplatesImport.php:260
-msgid "The import files for: %s were successfully downloaded!"
-msgstr ""
-
-#: inc/Helpers.php:542
-msgid "The import files were successfully uploaded!"
 msgstr ""
 
 #: inc/ReduxImporter.php:57
@@ -460,16 +398,11 @@ msgstr ""
 msgid "There were some issues while importing widgets!"
 msgstr ""
 
-#: inc/Helpers.php:299
+#: inc/Helpers.php:200
 msgid ""
 "This WordPress page does not have %sdirect%s write file access. This plugin "
 "needs it in order to save the demo import xml file to the upload directory "
 "of your site. You can change this setting with these instructions: %s."
-msgstr ""
-
-#: inc/Helpers.php:471 inc/Helpers.php:488 inc/Helpers.php:505
-#: inc/Helpers.php:516 inc/Helpers.php:536 inc/Helpers.php:544
-msgid "Upload files"
 msgstr ""
 
 #: views/plugin-page.php:64
@@ -480,10 +413,6 @@ msgstr ""
 msgid "Widget already exists"
 msgstr ""
 
-#: inc/Helpers.php:484
-msgid "Widget file was not uploaded. Error: %s"
-msgstr ""
-
 #: inc/WPCLICommands.php:223
 msgid "Widgets import file provided does not exist! Skipping this import!"
 msgstr ""
@@ -492,10 +421,10 @@ msgstr ""
 msgid "Widgets imported successfully!"
 msgstr ""
 
-#: inc/MybookingTemplatesImport.php:192
+#: inc/MybookingTemplatesImport.php:193
 msgid "Yes, import!"
 msgstr ""
 
-#: inc/Helpers.php:331
+#: inc/Helpers.php:232
 msgid "Your WordPress login credentials don't allow to use WP_Filesystem!"
 msgstr ""
