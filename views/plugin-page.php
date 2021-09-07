@@ -137,7 +137,7 @@ do_action( 'mybooking-templates-importer/plugin_page_header' );
 						</ul>
 					</nav>
 					<div clas="mybookingTemplatesImporter__gl-search">
-						<input type="search" class="mybookingTemplatesImporter__gl-search-input  js-mybooking-templates-importer-gl-search" name="mybooking-templates-importer-gl-search" value="" placeholder="<?php esc_html_e( 'Search demos...', 'mybooking-templates-importer' ); ?>">
+						<input type="search" class="mybookingTemplatesImporter__gl-search-input  js-mybooking-templates-importer-gl-search" name="mybooking-templates-importer-gl-search" value="" placeholder="<?php esc_attr_e( 'Search demos...', 'mybooking-templates-importer' ); ?>">
 					</div>
 				</div>
 			<?php endif; ?>
