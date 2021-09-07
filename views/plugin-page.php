@@ -9,7 +9,7 @@ namespace MybookingTemplatesImporter;
 
 $predefined_themes = $this->import_files;
 
-if ( ! empty( $this->import_files ) && isset( $_GET['import-mode'] ) && 'manual' === $_GET['import-mode'] ) {
+if ( empty( $this->import_files ) ) {
 	$predefined_themes = array();
 }
 

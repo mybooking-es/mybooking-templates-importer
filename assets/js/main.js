@@ -20,19 +20,6 @@ jQuery( function ( $ ) {
 		data.append( 'action', 'mybookingTemplatesImporter_import_demo_data' );
 		data.append( 'security', mybookingTemplatesImporter.ajax_nonce );
 		data.append( 'selected', $( '#mybookingTemplatesImporter__demo-import-files' ).val() );
-		if ( $('#mybookingTemplatesImporter__content-file-upload').length ) {
-			data.append( 'content_file', $('#mybookingTemplatesImporter__content-file-upload')[0].files[0] );
-		}
-		if ( $('#mybookingTemplatesImporter__widget-file-upload').length ) {
-			data.append( 'widget_file', $('#mybookingTemplatesImporter__widget-file-upload')[0].files[0] );
-		}
-		if ( $('#mybookingTemplatesImporter__customizer-file-upload').length ) {
-			data.append( 'customizer_file', $('#mybookingTemplatesImporter__customizer-file-upload')[0].files[0] );
-		}
-		if ( $('#mybookingTemplatesImporter__redux-file-upload').length ) {
-			data.append( 'redux_file', $('#mybookingTemplatesImporter__redux-file-upload')[0].files[0] );
-			data.append( 'redux_option_name', $('#mybookingTemplatesImporter__redux-option-name').val() );
-		}
 
 		// AJAX call to import everything (content, widgets, before/after setup)
 		ajaxCall( data );
@@ -271,6 +258,11 @@ jQuery( function ( $ ) {
 	 * The main AJAX call, which executes the import process.
 	 *
 	 * @param FormData data The data to be passed to the AJAX call.
+	 * 
+	 * action
+	 * security
+	 * selected => The selected template to import
+	 * 
 	 */
 	function ajaxCall( data ) {
 		$.ajax({

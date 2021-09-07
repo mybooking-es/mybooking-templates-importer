@@ -142,7 +142,7 @@ class WPCLICommands extends \WP_CLI_Command {
 
 		WP_CLI::log( esc_html__( 'Preparing the demo import files...', 'mybooking-templates-importer' ) );
 
-		$import_files =	Helpers::download_import_files( $selected_files );
+		$import_files =	Helpers::prepare_import_files( $selected_files );
 
 		if ( empty( $import_files ) ) {
 			WP_CLI::error( esc_html__( 'Demo import files could not be retrieved!', 'mybooking-templates-importer' ) );

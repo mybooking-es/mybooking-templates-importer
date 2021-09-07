@@ -167,8 +167,9 @@ class MybookingTemplatesImport {
 	 * @param string $hook holds info on which admin page you are currently loading.
 	 */
 	public function admin_enqueue_scripts( $hook ) {
+		$import_get = sanitize_text_field( filter_input( INPUT_GET, 'import' ) );
 		// Enqueue the scripts only on the plugin page.
-		if ( $this->plugin_page === $hook || ( 'admin.php' === $hook && $this->plugin_page_setup['menu_slug'] === esc_attr( $_GET['import'] ) ) ) {
+		if ( $this->plugin_page === $hook || ( 'admin.php' === $hook && $this->plugin_page_setup['menu_slug'] === $import_get ) ) {
 			wp_enqueue_script( 'jquery-ui-dialog' );
 			wp_enqueue_style( 'wp-jquery-ui-dialog' );
 
@@ -203,7 +204,7 @@ class MybookingTemplatesImport {
 
 	/**
 	 * Main AJAX callback function for:
-	 * 1). prepare import files (uploaded or predefined via filters)
+	 * 1). prepare import files (predefined via filters)
 	 * 2). execute 'before content import' actions (before import WP action)
 	 * 3). import content
 	 * 4). execute 'after content import' actions (before widget import WP action, widget import, customizer import, after import WP action)
@@ -226,43 +227,17 @@ class MybookingTemplatesImport {
 			$this->log_file_path = Helpers::get_log_path();
 
 			// Get selected file index or set it to 0.
-			$this->selected_index = empty( $_POST['selected'] ) ? 0 : absint( $_POST['selected'] );
+			$this->selected_index = array_key_exists('selected', $_POST) ? absint(sanitize_text_field( filter_input( INPUT_POST, 'selected', FILTER_VALIDATE_INT ) ) ) : 0;
 
 			/**
 			 * 1). Prepare import files.
-			 * Manually uploaded import files or predefined import files via filter: mybooking-templates-importer/import_files
+			 * Predefined import files via filter: mybooking-templates-importer/import_files
 			 */
-			if ( ! empty( $_FILES ) ) { // Using manual file uploads?
-				// Get paths for the uploaded files.
-				$this->selected_import_files = Helpers::process_uploaded_files( $_FILES, $this->log_file_path );
+			if ( ! empty( $this->import_files[ $this->selected_index ] ) ) { // Use predefined import files from wp filter: mybooking-templates-importer/import_files.
 
-				// Set the name of the import files, because we used the uploaded files.
-				$this->import_files[ $this->selected_index ]['import_file_name'] = esc_html__( 'Manually uploaded files', 'mybooking-templates-importer' );
-			}
-			elseif ( ! empty( $this->import_files[ $this->selected_index ] ) ) { // Use predefined import files from wp filter: mybooking-templates-importer/import_files.
+				// Prepare the import files (content, widgets and customizer files).
+				$this->selected_import_files = Helpers::prepare_import_files( $this->import_files[ $this->selected_index ] );
 
-				// Download the import files (content, widgets and customizer files).
-				$this->selected_import_files = Helpers::download_import_files( $this->import_files[ $this->selected_index ] );
-
-				// Check Errors.
-				if ( is_wp_error( $this->selected_import_files ) ) {
-					// Write error to log file and send an AJAX response with the error.
-					Helpers::log_error_and_send_ajax_response(
-						$this->selected_import_files->get_error_message(),
-						$this->log_file_path,
-						esc_html__( 'Downloaded files', 'mybooking-templates-importer' )
-					);
-				}
-
-				// Add this message to log file.
-				$log_added = Helpers::append_to_file(
-					sprintf(
-						__( 'The import files for: %s were successfully downloaded!', 'mybooking-templates-importer' ),
-						$this->import_files[ $this->selected_index ]['import_file_name']
-					) . Helpers::import_file_info( $this->selected_import_files ),
-					$this->log_file_path,
-					esc_html__( 'Downloaded files' , 'mybooking-templates-importer' )
-				);
 			}
 			else {
 				// Send JSON Error response to the AJAX call.
