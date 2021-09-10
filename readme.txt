@@ -62,7 +62,8 @@ The content, widgets and customizer options can be mixed and used at the same ti
 == Screenshots ==
 
 1. Select template page.
-2. Template Rent Standard Selector Elementor
+2. Template Rent Standard Selector Elementor - Home
+3. Template Rent Standard Selector Elementor - Contact page
 
 == Changelog ==
 
